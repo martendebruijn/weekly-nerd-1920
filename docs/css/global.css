@@ -30,6 +30,7 @@ body {
   width: 100vw;
   line-height: 1.5 !important;
   min-width: 501px;
+  max-width: 100vw;
 }
 body > * {
   padding: 0 1em;
@@ -67,7 +68,7 @@ footer {
 main {
   background: rgb(249, 249, 249);
   background: var(--theme-background);
-  padding: 1em;
+  padding: 1em 3em;
 }
 main > section {
   padding: 1em 0;
@@ -82,13 +83,23 @@ header,
 footer {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
 }
-/* headers */
+article > * {
+  margin-top: 1em;
+}
+article > h2 {
+  margin-top: 0;
+}
+/* headers + text */
 h1,
 h2,
 h3,
 header a,
-b {
+b,
+h4 {
   font-weight: 700;
+}
+i {
+  font-style: italic;
 }
 h1 {
   font-size: 1.5em;
@@ -96,10 +107,15 @@ h1 {
 h2 {
   font-size: 1.3em;
 }
-h3 {
+h3,
+h4,
+h5 {
   font-size: 1.1em;
 }
-
+a {
+  color: #3e64ff;
+  color: var(--link-color);
+}
 /* utility */
 img {
   max-width: 100%;
@@ -113,6 +129,7 @@ img {
   height: 350px;
   margin: 1em 0;
   transition: all 0.2s ease-in-out;
+  padding-bottom: 0.5em;
 }
 .card-wrapper .img-wrapper {
   overflow: hidden;
@@ -131,18 +148,13 @@ img {
 .card-wrapper:hover {
   transform: scale(0.9);
 }
-/* footer */
-footer a {
-  color: #3e64ff;
-  color: var(--link-color);
-}
 /* desktop + tablets */
 @media (min-width: 750px) {
   main {
-    padding: 1em 4em;
+    padding: 1em 8em;
   }
   .card-wrapper {
-    width: 30em;
+    width: 19em;
   }
   h1 {
     font-size: 3em;
@@ -151,10 +163,17 @@ footer a {
     font-size: 2em;
   }
   h3,
-  p {
+  p,
+  a {
     font-size: 1.5em;
   }
-  footer p {
+  h4,
+  h5 {
+    font-size: 1.1em;
+  }
+  header a,
+  footer p,
+  footer a {
     font-size: 16px;
   }
 }

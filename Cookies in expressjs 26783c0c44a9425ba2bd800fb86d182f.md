@@ -8,7 +8,7 @@ Credit: Miguel Fernandez Source: [https://gegen-den-strich.com/](https://gegen-d
 
 # Wat zijn cookies?
 
-Een cookie is een stuk tekst dat een web server kan opslaan op de harde schijf van de gebruiker. Dankzij cookies kan een web site informatie opslaan op de harde schijf van de gebruiker en kan deze later terughalen. De stukken informatie wordt opgeslagen als naam-waarde duo's. Een naam-waarde duo is een simpel stukje data die een naam heeft. 
+Een cookie is een stuk tekst dat een web server kan opslaan op de harde schijf van de gebruiker. Dankzij cookies kan een web site informatie opslaan op de harde schijf van de gebruiker en kan deze later terughalen. De stukken informatie wordt opgeslagen als naam-waarde duo's. Een naam-waarde duo is een simpel stukje data die een naam heeft.
 
 Een website kan enkel data terughalen die het zelf heeft opgeslagen. De website kan niet bij andere cookies; of bij iets anders op jouw computer.
 
@@ -26,7 +26,7 @@ Als de webserver cookies ontvangt, kan het deze vervolgens gaan gebruiken. Wanne
 
 Een cookie wordt gecreëerd als een webserver de browser verteld dat hij een cookie moet aanmaken. De instructies hiervoor worden gestuurd in een HTTP header. Dit ziet er zo uit: `Set-Cookie: <cookie_name≥<cookie_value>` .
 
-Men kan ook gebruik maken van `document.cookie` aan de client-side. 
+Men kan ook gebruik maken van `document.cookie` aan de client-side.
 
 Men kan een 'session cookie' maken, wiens alleen geldig is tijdens de huidige sessie, maar ook een cookie die langer bewaart wordt maken. Dit kan men doen door de `expires` attribute toe te voegen aan de header.
 
@@ -106,10 +106,10 @@ Men kan een cookie een bepaalde aflooptijd meegeven. Dit kan met `expire` of met
 
 ```jsx
 // Verloopt na 360000 ms vanaf de tijd dat de cookie is aangemaakt.
-res.cookie(name, 'value', {expire: 360000 + Date.now()});
+res.cookie(name, 'value', { expire: 360000 + Date.now() });
 
 // Verloopt na 360000 ms vanaf de tijd dat de cookie is aangemaakt.
-res.cookie(name, 'value', {maxAge: 360000});
+res.cookie(name, 'value', { maxAge: 360000 });
 ```
 
 ### Cookie verwijderen
@@ -124,7 +124,7 @@ res.clearCookie('name');
 
 ### Setup
 
-Net zoals bij de cookie parser moet men eerst de sessie middleware installeren en inladen. Versies voor  1.5.0 had deze middleware ook de cookie parser middleware nodig, maar vanaf versie 1.5.0 werkt deze middleware ook zonder. Het is dus niet nodig om ook de cookie parser middleware te installeren.
+Net zoals bij de cookie parser moet men eerst de sessie middleware installeren en inladen. Versies voor 1.5.0 had deze middleware ook de cookie parser middleware nodig, maar vanaf versie 1.5.0 werkt deze middleware ook zonder. Het is dus niet nodig om ook de cookie parser middleware te installeren.
 
 ```bash
 $ npm install --save express-session
@@ -142,12 +142,12 @@ De default server-side sessie opslag is `MemoryStore`. MemoryStore is specifiek 
 
 ```jsx
 app.use(
-		    session({
-						      secret: 'Dit is geheim!',
-						      resave: false,
-							    saveUninitialized: true,
-						      cookie: { secure: true },
-		   })
+  session({
+    secret: 'Dit is geheim!',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
+  })
 );
 ```
 
@@ -165,7 +165,7 @@ Om te kijken welke nodig is voor het type opslag je gebruikt is door te controle
 
 **saveUninitialized**
 
-Dwingt een sessie met de status `uninitialized` om opgeslagen te worden. Een sessie is uninitialized als de sessie nieuw is maar niet gewijzigd is. 
+Dwingt een sessie met de status `uninitialized` om opgeslagen te worden. Een sessie is uninitialized als de sessie nieuw is maar niet gewijzigd is.
 
 `saveUninitialized` is niet verplicht om aan te geven, maar de default waarde is verouderd. De default waarde zal gewijzigd worden in de toekomst, hierdoor is het aan te raden om deze momenteel wel aan te geven.
 
@@ -177,7 +177,7 @@ Achter `cookie.secure` komt een `boolean`. Met de waarde `true` wordt de cookie 
 
 Specificeert een getal in milliseconden wanneer de cookie verloopt.
 
-Zie [de express sessions documentatie](http://expressjs.com/en/resources/middleware/session.html) voor alle attributen. 
+Zie [de express sessions documentatie](http://expressjs.com/en/resources/middleware/session.html) voor alle attributen.
 
 ### Voorbeeld: pagina teller
 

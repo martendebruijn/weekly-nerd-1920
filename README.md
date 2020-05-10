@@ -1,5 +1,7 @@
 # Weekly Nerd @cmda-minor-web · 2019-2020
 
+**Ik ben bezig om een blog te maken in GitHub pages, maar voor de time-being zijn mijn weekly geeks en artikel in markdown te vinden (zonder de afbeeldingen):**
+
 ## Introductie
 
 ## Live Demo

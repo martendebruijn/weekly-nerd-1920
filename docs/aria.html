@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>WEEKLY GEEK - MARTEN DE BRUIJN</title>
+</head>
+<body>
+    <main class="hidde">
+        <h1>ARIA</h1>
+        <div class="blob"></div>
+        <a class="back-home" href="/docs"><span class="material-icons"> arrow_back </span></a>
+        
+        <section class="weekly-geeks">
+            <article>
+                <h2>Semantische HTML en ARIA</h2>
+                <p>Semantische HTML en Accessible Rich Internet Applications (ARIA) zijn twee manieren om web applicaties toegankelijk te maken voor iedereen. Beide voegen betekenissen toe aan de inhoud van een web applicatie. Betekenissen die browsers, zoekmachines, schermlezers, RSS-lezers en uiteindelijk gebruikers de inhoud laten begrijpen.</p>
+                <p>Semantische HTML wordt vaak nog wel gebruikt, ARIA aan de andere kant niet. Waarom is dat? Dat vroeg Adam Silver, interactie designer en auteur van design- en CSS-boeken, zich ook af. Hij stelde de vraag op Twitter. Het gros gaf aan dat men zich er simpelweg niet van bewust zijn van het bestaan en van de voordelen van het gebruik van semantische HTML en van ARIA.</p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Why do people opt not to use semantic HTML?</p>&mdash; Adam Silver (@adambsilver) <a href="https://twitter.com/adambsilver/status/1113502475800260608?ref_src=twsrc%5Etfw">April 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+               <h5>Semantische HTML</h5>
+               <p>Het &lt;body&gt; element van een HTML document bevat wat de gebruiker ziet op een pagina. Wanneer men hier tekst inzet, zonder aanvullende elementen, kan een browser geen onderscheid maken tussen de verschillende soorten inhoud.
+            </p>
+            <p class="codepen margin-top-45" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="martendebruijn" data-slug-hash="qBbVgEp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="No markup">
+                <span>See the Pen <a href="https://codepen.io/martendebruijn/pen/qBbVgEp">
+                No markup</a> by Marten de Bruijn (<a href="https://codepen.io/martendebruijn">@martendebruijn</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        <p class="margin-top-45">Als een browser geen onderscheid kan maken tussen de verschillende soorten inhoud, kan hij deze inhoud niet op een betekenisvolle manier aan de gebruiker presenteren. Dit betekent ook dat losse elementen, zoals alinea’s en koppen, niet anders gestijld kunnen worden, het lastiger is voor zoekmachines om de inhoud te interpreteren en dat assisterende technologieën geen onderscheid kunnen maken tussen de verschillende elementen. </p>
+         <p>De tekst uit bovenstaand voorbeeld kan men <i>visueel</i> stijlen door ze in &lt;div&gt; elementen en in &lt;span&gt; elementen te zetten. Met CSS kan men deze elementen selecteren en stijlen. </p>
+         <p class="codepen margin-top-45" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="martendebruijn" data-slug-hash="NWxwoGW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NWxwoGW">
+            <span>See the Pen <a href="https://codepen.io/martendebruijn/pen/NWxwoGW">
+            NWxwoGW</a> by Marten de Bruijn (<a href="https://codepen.io/martendebruijn">@martendebruijn</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>   
+          
+          <p class="margin-top-45">Een &lt;div&gt; en een &lt;span&gt; element zijn echter niet semantisch. Ondanks dat men op deze manier de verschillende elementen apart kan stijlen, kan bijvoorbeeld een schermlezer nog steeds geen onderscheid maken tussen de verschillende elementen. Dit is waar semantische HTML om de hoek komt kijken. In HTML heeft men zes header elementen die aangeven dat het een koptekst is, &lt;h1&gt; tot &lt;h6&gt;. Voor alinea teksten bestaat het paragraph element, &lt;p&gt;. Wanneer deze elementen gebruikt worden, kan een schermlezer onderscheidt maken tussen de verschillende elementen. </p>
+          <p class="codepen margin-top-45" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="martendebruijn" data-slug-hash="XWXzOXR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="XWXzOXR">
+            <span>See the Pen <a href="https://codepen.io/martendebruijn/pen/XWXzOXR">
+            XWXzOXR</a> by Marten de Bruijn (<a href="https://codepen.io/martendebruijn">@martendebruijn</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <p class="margin-top-45">Wanneer we het voorbeeld op deze manier opmaken, wordt er aan ondersteunende technologieën doorgegeven welke tekst een kop is en wanneer het om een alinea gaat. Ook kunnen zoekmachines en RSS-lezers nu wel onderscheidt maken. Hierdoor kan men ook een web pagina openen in leesmodes als een browser dit ondersteund, bijvoorbeeld Safari:</p>
+        <img class="margin-top-45" src="https://i0.wp.com/www.chriswrites.com/wp-content/uploads/customise-safaris-reader-mode.png?resize=822%2C400&ssl=1" alt="">
+        <p class="margin-top-45">Het gebruik van semantische HTML is ook een voordeel voor developers. Bovendien is het minder code omdat men elementen nu geen klassen hoeft te geven, het is ook leesbaarder voor andere developers die jouw code lezen. Ze zien meteen wat voor een element iets is. </p>
+        <p class="margin-top-45">Semantische HTML voor specifieke doelen zorgen ook voor relevant gedrag van een browser. Neem het element &lt;input rel="tel"&gt;. Dit element is een &lt;input&gt; element: het verteld een browser dat de gebruiker hier iets kan invoeren. Het attribuut type=„tel“ vertelt de browser dat het hier een telefoonnummer verwacht. Wanneer een gebruiker op zijn mobiel op dit input element klikt krijgt men een speciaal toetsenbord, ontworpen om telefoonnummers in te voeren, te zien.</p>
+        <img class="margin-top-45" src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2018/04/inputmode-4.png?ssl=1" alt="">
+        <h5>ARIA</h5>
+        <p>Semantische HTML is dus een goed idee om te gebruiken, maar wat is ARIA? ARIA is ontworpen om web applicaties toegankelijker te maken voor ondersteunende technologieën. Stel je hebt een formulier waar men zijn e-mailadres moet invullen. Wanneer de invoer om welke reden dan ook niet toegestaan is, kan men een foutmelding laten zien op het scherm. Dit kan men doen door bijvoorbeeld &lt;span&gt;Voer een geldig mail adres in, zoals voorbeeld@gmail.com.&lt;/span&gt;. Het probleem hier, is dat deze foutmelding bijvoorbeeld niet voorgelezen zal worden door een schermlezer. Wanneer we het attribuut aria-describedby toevoegen aan het input element (en dus niet de foutmelding zelf!) en de foutmelding zelf een ID geven, gebeurd dit wel.</p>
+        <code class="block margin-top-45">
+            &lt;span&gt; id="email-error">Voer een geldig mail adres in, zoals voorbeeld@gmail.com.&lt;/span&gt;
+            &lt;input type="email" aria-describedby="email-error"&gt;
+        </code>
+        <h5>ARIA en JavaScript</h5>
+        <p>ARIA komt pas echt tot zijn recht wanneer JavaScript gebruikt wordt. Sterker nog JavaScript is meestal noodzakelijk om ARIA goed te laten functioneren. Stel we hebben een drop-down menu. Met het attribuut aria-expanded kunnen we ondersteunende technologieën laten weten of het menu open is of niet. Wanneer het menu niet open is, is aria-expanded=„false“. Als het menu open is, is aria-expanded="true". In HTML kan men de standaard waarde meegeven. De standaard waarde is de waarde die het moet zijn wanneer de pagina geladen wordt. Als het menu gesloten moet zijn wanneer de pagina laadt, dan moet men dus aria-expanded="false" definiëren. Wanneer de gebruiker het menu opent, wordt dit attribuut niet vanzelf aangepast. Dit moet men m.g.v. JavaScript veranderen naar <i>true</i>.</p>
+        <h5>Eerste regel van ARIA</h5>
+        <p>Men kan ARIA gebruiken om niet-semantische elementen toegankelijker te maken. Het is echter niet de bedoeling dat men ARIA gebruikt i.p.v. semantische elementen. Dit resulteert in meer code en het zal alleen maar werken voor gebruikers die technologieën gebruiken die de ARIA attributen ook daadwerkelijk begrijpen. De eerste regel van ARIA luidt dan ook: gebruik het niet als het niet nodig is. Als je een HTML element of attribuut kan gebruiken waar de semantiek en het gedrag ingebouwd is i.p.v. een ARIA attribuut te gebruiken, doe dat dan ook.</p>
+        </article>
+        </section>
+        </main>
+    </body>
+    </html>

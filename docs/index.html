@@ -1,105 +1,46 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <title>WEEKLY NERD</title>
-  </head>
-  <body>
-    <header>
-      <div>
-        <a href="/docs"
-          >🤓
-          <span class="show-desktop">Weekly Nerd | Marten de Bruijn</span></a
-        >
-      </div>
-      <div>
-        <a href="#weekly-nerd">Weekly Nerd</a>
-        <a href="#artikelen">Artikelen</a>
-      </div>
-    </header>
-
-    <main>
-      <section>
-        <section>
-          <h1>🎓 Weekly Geek</h1>
-          <h1>👨🏻‍💻 Marten de Bruijn</h1>
-        </section>
-        <p>
-          Welkom op mijn blog voor de weekly geek. (Bijna) Iedere week van de
-          minor is er een talk of workshop met iemand van het werkveld. Op deze
-          pagina zal ik deze ervaringen delen en ook zal ik drie artikelen
-          schrijven.
-        </p>
-      </section>
-      <section id="weekly-nerd">
-        <h2>Weekly Nerd</h2>
-        <section>
-          <a href="./weekly-geek/hidde-de-vries.html">
-            <div class="card-wrapper">
-              <div class="fixed-ratio" style="padding-bottom: 56.25%;">
-                <img
-                  class="fixed-ratio-content"
-                  src="./img/overview-page.png"
-                  alt="Afbeelding"
-                />
-              </div>
-              <div class="card-info">
-                <h4>Hidde de Vries</h4>
-                <h5>13-02-2020</h5>
-              </div>
-            </div>
-          </a>
-          <a href="./weekly-geek/funda.html">
-            <div class="card-wrapper">
-              <div class="fixed-ratio" style="padding-bottom: 56.25%;">
-                <img
-                  class="fixed-ratio-content"
-                  src="./img/overview-page.png"
-                  alt="Afbeelding"
-                />
-              </div>
-              <div class="card-info">
-                <h4>Op bezoek bij Funda</h4>
-                <h5>04-09-2020</h5>
-              </div>
-            </div>
-          </a>
-          <a href="./weekly-geek/sanne-hooft.html">
-            <div class="card-wrapper">
-              <div class="fixed-ratio" style="padding-bottom: 56.25%;">
-                <img
-                  class="fixed-ratio-content"
-                  src="./img/overview-page.png"
-                  alt="Afbeelding"
-                />
-              </div>
-              <div class="card-info">
-                <h4>Sanne Hooft</h4>
-                <h5>04-09-2020</h5>
-              </div>
-            </div>
-          </a>
-        </section>
-      </section>
-      <section id="artikelen">
-        <h2>Artikelen</h2>
-        <p>Momenteel heb ik nog geen artikelen geschreven.</p>
-      </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>WEEKLY GEEK - MARTEN DE BRUIJN</title>
+</head>
+<body>
+  <main class="home">
+    <h1>WEEKLY GEEK</h1>
+    <div class="blob"></div>
+    
+    <section class="weekly-geeks">
+        <div>
+            <a class="large-links" href="hidde.html">Het web is klaar voor geweldig grafisch ontwerp</a>
+            <h3>Hidde de Vries <span>13-02-2020</span></h3>
+        </div>
+        <div>
+            <a class="large-links" href="sanne.html">Microtransacties</a>
+            <h3>Sanne 't Hooft <span>19-02-2020</span></h3>
+        </div>
+        <div>
+            <a class="large-links" href="funda.html">Funda</a>
+            <h3>Lars<span>26-02-2020</span></h3>
+        </div>
+        <div class="pad-45">
+            <h2 class="artikelen">ARTIKELEN</h2>
+        </div>
+        <div class="pad-45">
+            <a class="large-links" href="cookies.html">Cookies in expressjs</a>
+        </div>
+        <div class="pad-45">
+            <a class="large-links" href="debugging.html">Debugging 101</a>
+        </div>
+        <div class="pad-45">
+            <a class="large-links" href="aria.html">ARIA</a>
+        </div>
+    </section>
+    <h4>Door Marten de Bruijn</h4>
     </main>
-    <footer>
-      <p>
-        <b>
-          Made with ❤️ by
-          <a href="http://www.martendebruijn.nl/">Marten de Bruijn</a>
-        </b>
-      </p>
-    </footer>
-  </body>
+  <script src="dist/all.js"></script>
+</body>
 </html>

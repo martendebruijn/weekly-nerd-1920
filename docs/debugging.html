@@ -17,7 +17,7 @@
         <section class="weekly-geeks">
             <article>
                 <h2>Debugging 101</h2>
-                <img class="margin-top-45" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9594d8b5-bd6e-412e-a5fd-6bfcdd8f4ab4/debugging.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200701%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200701T181621Z&X-Amz-Expires=86400&X-Amz-Signature=ac4fce55df94cac9023620c2534a2811e8c301705787552bbcd7d48344898415&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22debugging.png%22" alt="Screenshot van de debug console in vsc">
+                <img class="margin-top-45" src="./img/debugging/bug-1.png" alt="Screenshot van de debug console in vsc">
                 <p class="margin-top-45">Het principe van debuggen is erg belangrijk om te weten en kunnen als programmeur. Maar hoe werkt dat debuggen eigenlijk? De definitie van debuggen is: "het opsporen en verhelpen van bugs in computerprogramma's en elektronische hardware". Ook heeft je favoriete code editor en browser een speciale debug console. Maar veel verder dan console.log() kom ik eigenlijk nooit. Met dit artikel wil ik onderzoeken hoe men debuggen kan aanpakken.</p>
                 <h5>Voor het debuggen</h5>
                 <p>Door middel van debuggen kan men zijn code stap voor stap laten uitvoeren om zo het exacte punt te vinden waar een fout - bug - zit. Voordat men begint met debuggen is het belangrijk om antwoord te geven op de volgende twee vragen:</p>
@@ -28,12 +28,12 @@
                 <p>Door antwoord te geven op de bovenstaande vragen kan men soms al een beter idee krijgen waar in de code het precies fout gaat.</p>
                 <h5>Let goed op Errors</h5>
                 <p>Ook moet men opletten of de code een bepaalde error geeft. Errors in talen als JavaScript geven vaak al aan wat voor een fout het is en op welke regel dit bevind. Neem bijvoorbeeld onderstaande error. Hier staat duidelijk aangegeven wat het probleem is: 'Uncaught ReferenceError: tabs is not defined'. Erachter staat aangegeven waar precies deze error veroorzaakt werd: 'popup.js:17'. Dit betekent dat in popup.js op regel 17 de error werd afgevuurd. Ook staat er informatie over de bepaalde functie of het bepaalde event. In het geval van het voorbeeld is dit: 'HTMLButtonElement.changeColor.onclick'.</p>
-                <img class="margin-top-45" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/041cfcd9-98ba-4152-a448-fdc0ce28e1f4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200701%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200701T181838Z&X-Amz-Expires=86400&X-Amz-Signature=66b28d69c239eccbf34565bc5dc62ae90d74b3579f6a71eda8a30a64350d2dcc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" alt="screenshot van error">
+                <img class="margin-top-45" src="./img/debugging/bug-2.png" alt="screenshot van error">
             <h5>VSC debugger</h5>
             <p>De code editor die ik gebruik is Visual Studio Code (=VSC). VSC heeft een ingebouwde debugger. Deze debugger ondersteund Node.js en kan JavaScript, TypeScript en iedere andere taal die wordt getransformeerd naar JavaScript. Voor andere talen kan men via extensies ook gebruik maken van de debugger.</p>
             <p>De debugger kan men openen door op het debugger icon te klikken of d.m.v. de toets-combinatie ⇧⌘D . Als men op Run and Debug of F5 drukt, probeert VSC het laatste actieve bestand uit te voeren. Echter is het meestal handiger om een launch.json bestand aan te maken. In dit bestand kan men debug instellingen zetten en opslaan.</p>
-            <img class="margin-top-45" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/40d54818-a282-41df-82c5-88c8e74b2faf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200701%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200701T182934Z&X-Amz-Expires=86400&X-Amz-Signature=9aef28b0e9e9e32a9f262a91a8b11bee94fcc2c87214a720735f0a1d388ed28d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" alt="">
-            <img class="margin-top-45" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fffefa2b-1b31-4eec-a224-8cef80a184ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200701%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200701T182950Z&X-Amz-Expires=86400&X-Amz-Signature=f2628a5c841d4dd3e996bda53968e2d061cf7f17bc39a8ff3037e3a7f9932c38&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" alt="">
+            <img class="margin-top-45" src="./img/debugging/bug-3.png" alt="">
+            <img class="margin-top-45" src="./img/debugging/bug-4.png" alt="">
             <h5>Launch.json</h5>
             <p>Om een launch.json aan te maken drukt men op create a launch.json file. Dit maakt automatisch het bestand aan. Het bestand staat in de root folder in een .vscode folder. </p>
             <p>Het launch.json bestand dat gegeneert is:</p>
@@ -61,7 +61,7 @@
             <p>In launch.json kan men een nieuwe configuratie zetten. In de debug tab kan men een debug configuratie selecteren en deze starten. </p>
         <h5>Breakpoints</h5>
         <p>Een breakpoint is simpel gezegd een stop moment op een regel. Op de regel waar een breakpoint is gezet zal de applicatie stoppen.</p>
-        <img class="margin-top-45" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/581ce50b-9a03-4549-8e1e-9cad484c89b0/breakpoint.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200701%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200701T183209Z&X-Amz-Expires=86400&X-Amz-Signature=64db351d18854ac008dd8c3e0c8e6442e2e9ee99a2bdc14490bea59a5ce8eaee&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22breakpoint.png%22" alt="">
+        <img class="margin-top-45" src="./img/debugging/bug-5.png" alt="">
             
         <h5>Conclusie</h5>
         <p>Voordat men begint met debuggen is het van belang om antwoord te geven op de vragen: wat moest er gebeuren? en wat gebeurde er in plaats daarvan?. Ook is het belangrijk dat men naar errors kijkt. In de error staat vaak al wat het probleem is en op welke regel deze zich bevind. 
